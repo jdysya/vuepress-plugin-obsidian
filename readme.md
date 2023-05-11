@@ -8,9 +8,11 @@
 
 实现将`obsidian`中插件`Admonition`语法转换为`vuepress`中的语法，如将
 
+````
 ```ad-tip
 //something
 ```
+````
 
 转换为
 
@@ -41,3 +43,20 @@
 
 
 ![image-20230511181622479](https://cdn.jdysya.top/lsky/2023/05/11/1/05873071db0bac65.png)
+
+# 使用方法
+
+1. 在`vuepress`工程`.vuepress`目录下,新建`vuepress-plugin-obsidian`文件夹
+2. 将本项目的`dist`文件夹移动至该文件夹内
+3. 按照如下方式在`config.js`中引用插件
+
+```js
+import obsidianPlugin from "./vuepress-plugin-obsidian/dist";
+export default defineUserConfig({
+  //...
+  plugins: [
+    obsidianPlugin()
+  ],
+  //...
+})
+```
