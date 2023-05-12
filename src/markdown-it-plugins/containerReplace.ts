@@ -20,7 +20,7 @@ export function contaninerReplace(md) {
             }
             let containerContent = `:::${type} ${title}\n${content}\n:::`;
             if (collapse === "true") {
-                containerContent = `:::details\n${content}\n:::`;
+                containerContent = `:::details ${title}\n${content}\n:::`;
             }
             return containerContent;
         });
