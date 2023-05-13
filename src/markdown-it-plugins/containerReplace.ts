@@ -2,7 +2,7 @@ export function contaninerReplace(md) {
     const defaultRenderer = md.renderer.rules.fence;
 
     // Define a regular expression to match the fence blocks we want to convert
-    const fenceRegex = /^(`{3,4})ad-(tip|warning|note|info|danger)\s*\n([\s\S]+?)\n\1$/gm;
+    const fenceRegex = /^(`{3,4})ad-(tip|warning|note|info|danger|right|center)\s*\n([\s\S]+?)\n\1$/gm;
 
     // Replace the fence blocks with container syntax before parsing
     md.core.ruler.before("normalize", "fence-to-container", state => {
@@ -21,6 +21,9 @@ export function contaninerReplace(md) {
             let containerContent = `:::${type} ${title}\n${content}\n:::`;
             if (collapse === "true") {
                 containerContent = `:::details ${title}\n${content}\n:::`;
+            }
+            if(type === "right" || type === "center"){
+                containerContent = `:::${type}\n${content}\n:::`;
             }
             return containerContent;
         });

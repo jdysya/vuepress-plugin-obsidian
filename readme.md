@@ -44,6 +44,43 @@
 
 ![image-20230511181622479](https://cdn.jdysya.top/lsky/2023/05/11/1/05873071db0bac65.png)
 
+## 自定义对齐方式
+
+在`obsidian`插件`Admonition`中新增`Admonition type`,新增`right`和`center`类型,然后在`obsidian`的`外观`设置中的`mycss.css`中配置自定义样式,建议样式如下:
+
+```css
+.admonition-right .admonition-center {
+    margin: 0;
+    padding: 0;
+}
+
+.admonition-right>div:nth-child(2) {
+    float: right;
+}
+
+.admonition-center>div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+```
+
+注意:添加上述`CSS`样式,只是为了在`obsidian`中生效,显得不那么违和!
+
+然后本插件就会自动将
+````
+```ad-right
+居中
+```
+````
+转换为
+```
+:::right
+居中
+:::
+```
+
+`ad-center`同理
+
 # 使用方法
 
 1. 在`vuepress`工程`.vuepress`目录下,新建`vuepress-plugin-obsidian`文件夹
