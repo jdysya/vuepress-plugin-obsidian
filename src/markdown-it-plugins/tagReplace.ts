@@ -1,7 +1,7 @@
 export function tagReplace(md) {
   md.inline.ruler.before('text', 'badge', function (state, silent) {
     // 匹配 #tag 的正则表达式,防止匹配到行内代码块以及markdown的链接
-    var tagRegExp = /(?<!`)(?<![[(])#([\u4e00-\u9fa5\w]+)/g; 
+    var tagRegExp = /(?<!`)(?<![[(])#(?![^\]]*\))(?![^\[]*\]\()([\u4e00-\u9fa5\w]+)/g; 
     var match = tagRegExp.exec(state.src.slice(state.pos)); // 尝试匹配 #tag
     if (!match) return false; // 如果没有匹配到，继续处理下一个 token
     if (!silent) { // 如果成功匹配，则生成对应的 token
