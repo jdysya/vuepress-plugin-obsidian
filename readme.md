@@ -81,6 +81,12 @@
 
 `ad-center`同理
 
+![image-20230513094521864](https://cdn.jdysya.top/lsky/2023/05/13/1/209a330a09e3b0e3.png)
+
+
+
+![image-20230513094531636](https://cdn.jdysya.top/lsky/2023/05/13/1/ecac787eb65d5ea6.png)
+
 # 使用方法
 
 1. 在`vuepress`工程`.vuepress`目录下,新建`vuepress-plugin-obsidian`文件夹
