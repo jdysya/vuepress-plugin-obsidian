@@ -44,7 +44,7 @@
 
 ![image-20230511181622479](https://cdn.jdysya.top/lsky/2023/05/11/1/05873071db0bac65.png)
 
-## 自定义对齐方式
+## 三、自定义对齐方式
 
 在`obsidian`插件`Admonition`中新增`Admonition type`,新增`right`和`center`类型,然后在`obsidian`的`外观`设置中的`mycss.css`中配置自定义样式,建议样式如下:
 
@@ -86,6 +86,10 @@
 
 
 ![image-20230513094531636](https://cdn.jdysya.top/lsky/2023/05/13/1/ecac787eb65d5ea6.png)
+
+## 四、 锚点链接同步修改原始链接
+
+主要是解决[这个问题](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/3130)
 
 # 使用方法
 
