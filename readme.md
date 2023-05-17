@@ -107,3 +107,19 @@ export default defineUserConfig({
   //...
 })
 ```
+
+## 开发引入
+
+将本项目`clone`到本地,移到对应的`.vuepress`目录下,引用方式改为
+
+```js
+// confis.js
+import obsidianPlugin from "./vuepress-plugin-obsidian/src/index.ts";
+export default defineUserConfig({
+  //...
+  plugins: [
+    obsidianPlugin()
+  ],
+  //...
+})
+```
