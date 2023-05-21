@@ -13,7 +13,7 @@ export function linkReplace(md) {
       const [url, anchor] = href.split('#');
       
       // Replace dots in the anchor portion and add an underscore if it starts with a number
-      const newAnchor = anchor ? anchor.replace(/\./g, '-').replace(/^(\d)/, '_$1').replace("%20",'').toLowerCase() : '';
+      const newAnchor = anchor ? anchor.replace(/\./g, '-').replace(/^(\d)/, '_$1').replace("%20",'-').toLowerCase() : '';
       
       // Build the modified link
       const newHref = url + (newAnchor ? `#${newAnchor}` : '');
