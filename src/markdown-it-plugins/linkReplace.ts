@@ -17,7 +17,15 @@ export function linkReplace(md) {
      * 60% 为obsidian中的反引号
      * 20%为obsidian中的空格
      */
-    const newAnchor = anchor ? anchor.replace(/\./g, '-').replace(/^(\d)/, '_$1').replaceAll("%20", '-').replaceAll("%60", '').toLowerCase() : '';
+    const newAnchor = anchor ? anchor
+    .replace(/\./g, '-')
+    .replace(/^(\d)/, '_$1')
+    .replaceAll("%20",'-')
+    .replaceAll("%60",'')
+    .replaceAll("/","-")
+    .replaceAll("(","-")
+    .replaceAll(")","")
+    .toLowerCase() : '';
 
     // Build the modified link
     const newHref = url + (newAnchor ? `#${newAnchor}` : '');
