@@ -5,7 +5,7 @@ export function tabsReplace(md) {
     // Replace the fence blocks with container syntax before parsing
     md.core.ruler.before('normalize', 'custom-fence', state => {
         state.src = state.src.replace(fenceRegex, match => {
-            match = match.replaceAll('````', ':::')
+            match = match.replaceAll('````', '::::')
                 .replaceAll('tab:', '@tab ')
             return match;
         });
