@@ -110,7 +110,7 @@ export default defineUserConfig({
 
 ## 五、选项卡tabs的支持
 
-支持了`tabs`增强语法,在`obsidian`对应的插件是[obsidian-code-tab](https://github.com/lazyloong/obsidian-code-tab),为了语法上的统一,这里本人将其源码进行了小小的修改,其原本的语法是`tab`,修改为`tabs`,然后本插件就会在编译时将对应的语法转换为`vuepress`中的语法
+支持了`tabs`增强语法,在`obsidian`对应的插件是[obsidian-code-tab](https://github.com/lazyloong/obsidian-code-tab),为了语法上的统一,这里本人将其源码进行了小小的修改,其原本的语法是`tab`,修改为`tabs`,然后本插件就会在编译时将对应的语法转换为`vuepress`中的语法,需要注意的是,若在`tabs`中嵌套其他的容器(例如代码块这种包括反引号的块级内容),此时`tabs`需要使用四个反引号,平时可以直接使用三个反引号
 
 - `ob`中的效果
 
