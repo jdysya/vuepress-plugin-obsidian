@@ -120,7 +120,24 @@ export default defineUserConfig({
 
 ![image.png](https://cdn.jdysya.top/lsky/2023/06/02/1/bb6c979db7559594.png)
 
+# 六、卡片支持
 
+对于`vuepress`中的`card`语法请参考[卡片](https://vuepress-theme-hope.github.io/v2/zh/guide/markdown/card.html),在`obsidian`中实现对应语法的插件是[obsidian-auto-card-link](https://github.com/jdysya/obsidian-auto-card-link),此处给出的仓库是本人`fork`之后做了一些修改的版本,主要是为了兼容`vuepress`中`card`的语法,致敬原作者[nekoshita/obsidian-auto-card-link](https://github.com/nekoshita/obsidian-auto-card-link)
+
+在`vuepress`中,卡片数据支持 title、desc、logo、link 和 color 属性。
+
+在`obsidian`中,开启插件后,支持的属性有
+
+```ts
+  link: string;
+  title: string;
+  desc?: string;
+  host?: string;
+  favicon?: string;
+  logo?: string;
+```
+
+其中相同部分为两者兼容,其余部分则为各自的属性,只会在一方有效果
 
 ## 开发引入
 
