@@ -17,7 +17,7 @@ export function tagReplace(md) {
 }
 
 function isValid(match) {
-  let patternText = match[1] // 匹配的文本内容
+  let patternText = match[0] // 匹配的文本内容
   let index = match.input.indexOf(patternText)
   index += patternText.length
   if(match.input[index] === ')' || match.input[index] === ']') return false
